@@ -1,0 +1,16 @@
+#ifndef QSYSTEMHOTKEY_GLOBAL_H
+#define QSYSTEMHOTKEY_GLOBAL_H
+#define MOD_NOREPEAT    0x4000
+#define MOD_CONTROL     0x0002
+#define MOD_ALT         0x0001
+
+#include <QtCore/qglobal.h>
+//#include <QtGui>
+
+#if defined(QSYSTEMHOTKEY_LIBRARY)
+#  define QSYSTEMHOTKEYSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define QSYSTEMHOTKEYSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // QSYSTEMHOTKEY_GLOBAL_H

@@ -16,7 +16,6 @@ public:
     ~SystemHotkey();
 
     void addKey(int keyID, UINT holdKey, char charKey);
-    void connectFunction(int keyID, std::string func);
     void removeKey(int keyID);
 
     void beginHotkeys(void);
@@ -25,14 +24,12 @@ public:
 public:
 
 private:
-    typedef std::pair<int, std::string> key;
-
     void listen(void);
     void run(int pos);
 
     bool running;
     MSG msg;
-    std::vector<key> hotkeys;
+    std::vector<int> hotkeys;
 };
 
 #endif // SYSTEMHOTKEY_H
